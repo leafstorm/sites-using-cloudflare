@@ -7,12 +7,10 @@ Cloudflare has not provided an official list of affected domains, and likely wil
 
 ## Impact
 
-**Between 2016-09-22 - 2017-02-18 passwords, private messages, API keys, and other sensitive data were leaked by Cloudflare to random requesters.**  
-Data was cached by search engines, and may have been collected by random adversaries over the past few months.
+Passwords, private messages, API keys, and other sensitive data were leaked by cloudflare to random requesters between these dates: **2016-09-22 - 2017-02-18 **.
+Data may be cached by search engines, or collected by random adversaries over the past few months.
 
  "The greatest period of impact was from February 13 and February 18 with around 1 in every 3,300,000 HTTP requests through Cloudflare potentially resulting in memory leakage (that’s about 0.00003% of requests), potential of 100k-200k paged with private data leaked every day" -- [source](https://news.ycombinator.com/item?id=13719518)
-
-You can see some of the leaked data yourself in search engine caches: https://duckduckgo.com/?q=+%7B%22scheme%22%3A%22http%22%7D+CF-Host-Origin-IP&t=h_&ia=web
 
 ## What should I do?
 
@@ -30,48 +28,25 @@ Some sources:
  - DNS scraper I'm running on Alexa top 10,000 sites (grepping for cloudflare in results)
  - https://www.cloudflare.com/ips/  (going to find sites that resolve to these IPs next)
  - http://www.crimeflare.com/cfs.html (scrape of all cloudflare customers)
- 
-I'd rather be safe than sorry so I've included any domain here that remotely touches cloudflare.
-If I've made a mistake and you believe your site is not affected, submit a PR and I will merge it ASAP, I don't want to hurt anyone's reputation unecessarily.
 
-You can also ping me on twitter [@theSquashSH](https://twitter.com/thesquashsh) and I'll respond as soon as I can.
+==============
 
-
-## Full List
-
-**Download the [full list.zip](https://github.com/pirate/sites-using-cloudflare/raw/master/sorted_unique.zip) (23mb)**  
-
-7,385,121 potentially affected domains.  Download this file, unzip it, then run `grep domaintocheck.com < sorted_unique_cf.txt` to see if a domain is present.
-
-
-## Notable Sites
-
-- 1password.com
-- authy.com
-- coinbase.com
-- betterment.com
-- prosper.com
-- digitalocean.com
-- patreon.com
-- bitpay.com
 - news.ycombinator.com
-- producthunt.com
-- stackoverflow.com
-- medium.com
+- coinbase.com
 - reddit.com
 - 4chan.org
 - yelp.com
 - okcupid.com
+- meetup.com
+- digitalocean.com
 - zendesk.com
 - fastmail.com (does not proxy TLS, probably safe from this attack)
 - reddit.com
 - uber.com
-- transferwise.com
-
-## Alexa Top 10,000 affected sites:
-
+- lyft.com
 - upwork.com
 - codepen.io
+- medium.com
 - fiverr.com
 - thepiratebay.org
 - extratorrent.com
@@ -84,13 +59,21 @@ You can also ping me on twitter [@theSquashSH](https://twitter.com/thesquashsh) 
 - ziprecruiter.com
 - glassdoor.com
 - pastebin.com
+- stackoverflow.com
 - fitbit.com
 - discord.com
 - change.org
 - feedly.com
 - zoho.com
+- patreon.com
+- producthunt.com
+- bitpay.com
+- webassign.net
 - irccloud.com
 
+------
+
+(sorry theres a lot of porn sites in the full list, I dont have time to filter them out manually)
 
 - adf.ly
 - fiverr.com
